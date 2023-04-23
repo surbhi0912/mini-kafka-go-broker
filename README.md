@@ -16,8 +16,8 @@ Then, it checks if topicMetaInformation.txt contains the specified topicName - i
 
 ## Step 4
 
-produceMessage function reads the relevant file name for the specified from topicMetaInformation.txt and appends the message in a new line to the file.
+produceMessage function reads the relevant file name for the specified from topicMetaInformation.txt file. Then, it appends the producer message in a new line to the relevant topic partition file.
 
 ## Step 5
 
-consumeMessage functions reads the offset till which a topic partition is read upto from consumer_offsets.txt, and then reads the partition file data from the next line to the end of file.
+consumeMessage functions reads the line/offset till which a topic partition is read upto from consumer_offsets.txt file, and then reads the partition file data from the next line to the end of file, and appends the updated offset to the consumer_offsets.txt file.
