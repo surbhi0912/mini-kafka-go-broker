@@ -12,11 +12,11 @@ handleRequest function takes in the incoming client request and depending on the
 ## Step 3
 
 handleTopic function creates files topicMetaInformation.txt and consumer_offsets.txt if they do not exist already.
-Then, it checks if topicMetaInformation.txt contains the specified topicName - if yes, then files for the topicName already exist. If not, then it creates files for the topicName as per the number of partitions and replica specified in the producer client command. And appends these file names corresponding to the topicName in topicMetaInformation.txt. It also writes the topicName and partition number in the consumer_offsets.txt file.
+Then, it checks if topicMetaInformation.txt contains the specified topicName - if yes, then files for the topicName already exist. If not, then it creates files for the topicName as per the number of partitions and replicas specified in the producer client command. And appends these file names corresponding to the topicName in topicMetaInformation.txt. It also writes the topicName and partition number in the consumer_offsets.txt file.
 
 ## Step 4
 
-produceMessage function reads the relevant file name for the specified from topicMetaInformation.txt file. Then, it appends the producer message in a new line to the relevant topic partition file.
+produceMessage function reads the relevant file name for the specified topic from topicMetaInformation.txt file. Then, it appends the producer message in a new line to the relevant topic partition file.
 
 ## Step 5
 
